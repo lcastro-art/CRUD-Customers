@@ -12,7 +12,7 @@ export default function BasicStack({filteredCustomers}: BasicStackProps ) {
     return (
         <Stack spacing={2} >
             {filteredCustomers.map((item, index) => (
-                <CustomerCard key={index} item={item} />
+                <CustomerCard key={index} item={item} index={index} />
             ))}
 
         </Stack>

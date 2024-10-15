@@ -25,10 +25,13 @@ export const customerSlice = createSlice({
         addNewCustomer: (state, action: PayloadAction<CustomerState>) => {
             state.push(action.payload);
         },
+        deleteCustomer: (state, action: PayloadAction<number>) => {
+            state.splice(action.payload, 1);
+        },
     },
 });
 
 // Action creators are generated for each case reducer function
-export const { addNewCustomer } = customerSlice.actions
+export const { addNewCustomer, deleteCustomer } = customerSlice.actions
 
 export default customerSlice.reducer
